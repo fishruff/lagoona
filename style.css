@@ -24,6 +24,10 @@ body {
   padding: 10px;
   font-family: Muller, sans-serif;
 }
+.logo {
+  margin-left: auto;
+  margin-right: auto;
+}
 a,
 button {
   text-decoration: none;
@@ -211,6 +215,7 @@ header {
 .placmentMoreBlock {
   position: relative;
   border-radius: 15px;
+  min-height: 500px;
 }
 .placmentMoreBlock img {
   position: absolute;
@@ -273,7 +278,7 @@ header {
   border-radius: 15px;
   background: #fff;
   display: flex;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   padding: 28px;
   gap: 20px;
   justify-content: space-between;
@@ -288,6 +293,8 @@ header {
   border: none;
   border-bottom: 1px solid;
   outline: none;
+  background: none;
+  width: 100%;
 }
 .registrationBlock p {
   font-size: 12px;
@@ -299,7 +306,9 @@ header {
   justify-content: flex-end;
 }
 .search button {
-  width: 108px;
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
 }
 .Contacts {
   margin-top: 70px;
@@ -340,6 +349,9 @@ header {
   padding: 20px;
   margin-top: 20px;
 }
+.Bron {
+  margin-right: 20px;
+}
 footer {
   background: #333;
   border-radius: 15px;
@@ -375,6 +387,7 @@ footer p {
   flex-direction: column;
   align-items: flex-end;
 }
+
 .footerPhone {
   display: flex;
   flex-direction: column;
@@ -382,4 +395,123 @@ footer p {
 }
 .footerDesk a {
   margin-bottom: 20px;
+}
+@media screen and (max-width: 470px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+  .footerLink {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 20px;
+  }
+  .footerLink img {
+    filter: contrast(10);
+  }
+}
+@media screen and (max-width: 660px) {
+  header {
+    flex-direction: column;
+  }
+
+  .rightHeaderBlock {
+    margin-top: 20px;
+    margin-left: -30px;
+  }
+  .specialContent {
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr;
+  }
+  .placementBlocks {
+    grid-template-columns: repeat(1, 1fr) !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .benefitsBlocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .headNavigation {
+    flex-direction: column;
+  }
+  .headNavigation .leftBlock {
+    display: flex;
+    flex-direction: column;
+  }
+  .headNavigation .leftBlock a {
+    padding: 10px 0;
+  }
+  .headNavigation .rightBlock {
+    display: flex;
+    justify-content: space-between;
+    border-left: none;
+    width: 100%;
+    padding: 0;
+    gap: 12px;
+    border-top: 1px solid #e1e1e1;
+  }
+  .headNavigation .rightBlock button {
+    flex-grow: 1;
+    width: 50%;
+  }
+  .lastPlacement {
+    display: none;
+  }
+  .placementBlocks {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .contactBlock {
+    grid-template-columns: 1fr;
+  }
+  .contactLeftBlock button {
+    width: 100%;
+  }
+  footer {
+    grid-gap: 50px;
+  }
+  footer p {
+    font-size: 14px;
+  }
+  .UslugiBlocks {
+    grid-template-columns: 1fr;
+  }
+  .search {
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 900px) {
+  .rightBlock button {
+    margin-top: 10px;
+  }
+}
+@media screen and (max-width: 970px) {
+  .cntBorder {
+    grid-template-columns: 1fr;
+  }
+  .rightBlockCnt a {
+    margin-right: 30px;
+  }
+}
+@media screen and (max-width: 1050px) {
+  .placementBlockTopInfo {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+@media screen and (max-width: 1180px) {
+  .rightBlockCnt p,
+  a {
+    font-size: 12px;
+  }
+  .leftBlockCnt h3 {
+    font-size: 16px;
+  }
+  .search {
+    width: 50%;
+  }
+  .quentyPeople {
+    border: none;
+  }
+  .borderReg {
+    border: none;
+  }
 }

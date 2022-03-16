@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0" /> -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="style.css" />
     <link rel="stylesheet" href="./fonts/tabler-icons.min.css" />
     <link type="image/png" href="/favicon.png" rel="shortcut icon" />
@@ -14,7 +14,9 @@
   <body>
     <div class="container">
       <header>
-        <a href="#"><img class="logo" src="./img/logo.svg" alt="" /></a>
+        <a class="logo" href="#"
+          ><img class="logo" src="./img/logo.svg" alt=""
+        /></a>
         <div class="rightHeaderBlock">
           <a class="tel" href="#">+7 495 322 54 48</a>
           <a class="lk" href="#"
@@ -300,7 +302,7 @@
                 </div>
               </div>
             </div>
-            <div class="placementBlock">
+            <div class="placementBlock lastPlacement">
               <img src="./img/29.png" alt="" />
               <div class="placementBlockDesk">
                 <div class="placementBlockTopInfo">
@@ -326,31 +328,31 @@
         </div>
         <div id="registration" class="registration">
           <h2>Хочу тур</h2>
-          <div class="registrationBlock">
+          <form class="registrationBlock">
             <div class="city borderReg">
               <p>Город вылета</p>
-              <input type="text" />
+              <input required name="city" type="text" />
             </div>
             <div class="country borderReg">
               <p>Страна</p>
-              <input type="text" />
+              <input required name="country" type="text" />
             </div>
             <div class="date borderReg">
               <p>Дата прибытия</p>
-              <input type="date" />
+              <input required name="date" type="date" />
             </div>
             <div class="nights borderReg">
               <p>Ночей</p>
-              <input type="number" />
+              <input required name="nights" type="number" />
             </div>
             <div class="quentyPeople borderReg">
               <p>Туристы</p>
-              <input type="number" />
+              <input required name="quentyPeople" type="number" />
             </div>
             <div class="search">
-              <button class="defaultBut">Найти</button>
+              <button type="submit" class="defaultBut">Найти</button>
             </div>
-          </div>
+          </form>
         </div>
         <div id="Contacts" class="Contacts">
           <h2>Контакты</h2>
@@ -378,10 +380,14 @@
                   <h3>E-mail</h3>
                 </div>
                 <div class="rightBlockCnt">
-                  <a>lg.oona@mail.ru</a>
-                  <p>по вопросам бронирования</p>
-                  <a>hotels.ln@mail.ru</a>
-                  <p>по вопросам сотрудничества</p>
+                  <div class="Bron">
+                    <a>lg.oona@mail.ru</a>
+                    <p>по вопросам бронирования</p>
+                  </div>
+                  <div class="">
+                    <a>hotels.ln@mail.ru</a>
+                    <p>по вопросам сотрудничества</p>
+                  </div>
                 </div>
               </div>
               <div class="cntGraphikBlock cntBorder">
@@ -420,7 +426,7 @@
             <a href="">hotels.ln@mail.ru</a>
           </div>
           <div class="footerLink">
-            <a href=""><img src="./img/Group.svg" alt="" /></a>
+            <a href=""><img src="./img/Group.svg" alt=""></img></a>
             <a href=""><img src="./img/twitter.svg" alt="" /></a>
             <a href=""><img src="./img/facebook.svg" alt="" /></a>
             <a href=""><img src="./img/social.svg" alt="" /></a>
@@ -429,22 +435,6 @@
         </footer>
       </div>
     </div>
-    <script>
-      const scrollToElement = (el, offset = 80) =>
-        window.scrollTo({
-          top: el.getBoundingClientRect().top + window.pageYOffset - offset,
-          behavior: "smooth",
-        });
-
-      Array.from(
-        document.querySelectorAll(".headNavigation .leftBlock a")
-      ).forEach((link) => {
-        link.onclick = (event) => {
-          event.preventDefault();
-          const selector = link.getAttribute("href");
-          scrollToElement(document.querySelector(selector));
-        };
-      });
-    </script>
+    <script src="/main.js"></script>
   </body>
 </html>
