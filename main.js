@@ -21,7 +21,7 @@ const main = () => {
 
     console.log(payload);
 
-    fetch("https://jsonplaceholder.typicode.com/posts", {
+    fetch("https://postman-echo.com/post", {
       method: "POST",
       body: JSON.stringify(payload),
     }).then((res) => {
